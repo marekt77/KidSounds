@@ -1,0 +1,19 @@
+﻿{
+  "Sounds": [
+    {
+      "Name": "Dog",
+      "SoundFile": "Dog-barking.mp3",
+      "Picture": "dog.png"
+    },
+    {
+      "Name": "Cat",
+      "SoundFile": "Cat-meow.mp3",
+      "Picture": "cat.png"
+    },
+    {
+      "Name": "Bird",
+      "SoundFile": "Bird-chirping.mp3",
+      "Picture": "bird.png"
+    }
+  ]
+}

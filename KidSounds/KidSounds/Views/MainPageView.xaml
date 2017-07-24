@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KidSounds.Views.MainPageView"
+             xmlns:controls="clr-namespace:Plugin.GridViewControl.Common;assembly=Plugin.GridViewControl">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Kid Sounds" HorizontalOptions="CenterAndExpand"/>
+            <controls:GridView 
+                IsGroupingEnabled="False" 
+                ItemsSource="{Binding Sounds}" 
+                ItemTapped="GridView_ItemTapped">
+                <controls:GridView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:GridViewXamlCell>
+                            <Grid Padding="5">
+                                <Grid Padding="10" HeightRequest="150" WidthRequest="150">
+                                    <StackLayout 
+                                        HorizontalOptions="Center">
+                                        <Image 
+                                            Source="{Binding Picture}" />
+                                        <Label Text="{Binding Name}" 
+                                               FontSize="Large" 
+                                               HorizontalOptions="Center" 
+                                               HorizontalTextAlignment="Center" />
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </controls:GridViewXamlCell>
+                    </DataTemplate>
+                </controls:GridView.ItemTemplate>
+                
+            </controls:GridView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
