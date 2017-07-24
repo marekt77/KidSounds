@@ -22,13 +22,13 @@ namespace KidSounds.Views
             BindingContext = new MainPageViewModel();
         }
 
-        private void GridView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void GridView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var mySoundService = new SoundService();
 
-            //await mySoundService.PlaySoundAsync(((Sound)e.Item).SoundFile);
+            await mySoundService.PlaySoundAsync(((Sound)e.Item).SoundFile);
 
-            DisplayAlert("Alert", "Sound Should Play...", "OK");
+            await DisplayAlert("Alert", "Sound Should Play...", "OK");
         }
     }
 }
